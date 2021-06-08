@@ -5,7 +5,10 @@ API test for seekster
 To install the project navigate in to the api folder and run npm install or yarn
 
 # Run the api
-To run the api use the following script: npm run start or yarn start
+To run the api use the following script: npm run start or yarn start inside the api folder.
+
+# Run tests
+To run the tests use the following script: npm run test inside the api folder
 
 ## Details
 It is not possible to create transactions if the item is not present in the database, this was done as a security measurement incase someone would call the api with id's that are not present in the database.
@@ -85,6 +88,5 @@ GET localhost:8000/api/transactions/
     "__v": 0
   }
 ```
-]
 
 

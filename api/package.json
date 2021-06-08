@@ -1,18 +1,23 @@
 {
-  "name": "api-test",
-  "version": "1.0.0",
-  "description": "An api designed for an api-test",
-  "main": "server.js",
-  "type": "module",
-  "scripts": {
-    "start": "node server.js"
-  },
-  "author": "Christoffer Lindow",
-  "license": "ISC",
-  "dependencies": {
-    "@types/express": "^4.17.12",
-    "body-parser": "^1.19.0",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.1"
-  }
+    "name": "api-test",
+    "version": "1.0.0",
+    "description": "An api designed for an api-test",
+    "main": "server.js",
+    "type": "module",
+    "scripts": {
+        "start": "node server.js",
+        "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+    },
+    "transform": {},
+    "author": "Christoffer Lindow",
+    "license": "ISC",
+    "dependencies": {
+        "@types/express": "^4.17.12",
+        "body-parser": "^1.19.0",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "jest": "^27.0.4"
+    }
 }
