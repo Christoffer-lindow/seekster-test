@@ -12,8 +12,8 @@ const PORT = process.env.PORT ? process.env.PORT : 8000;
 const DB_URI = process.env.DB_URI;
 connectDB(DB_URI);
 
-app.use("/transactions", transactionRoute);
-app.use("/items", itemRoute);
+app.use("/api/transactions", transactionRoute);
+app.use("/api/items", itemRoute);
 
 app.listen(PORT, () => {
     console.log(`Server started on port ${PORT}`);

@@ -29,6 +29,9 @@ const createItem = async (req, res) => {
         return badResponse(res, "Malformed request");
     }
 
+    if (price_per_item < 1)
+        return badResponse(res, "Items need to have a price of atleast 1");
+
     // instantiate the item
     let item;
 

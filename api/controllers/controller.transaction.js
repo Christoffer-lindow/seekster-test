@@ -36,6 +36,8 @@ const processPayment = async (req, res) => {
         return badResponse(res, "Malformed request");
 
     // Verify that all items are present in the database
+    if (item_list.length < 1)
+        return badResponse(res, "A transactions needs atleast one item");
     try {
         const itemsVerified = await verifyItems(item_list);
         if (!itemsVerified) {
@@ -52,7 +54,7 @@ const processPayment = async (req, res) => {
     if (total > payment)
         // if the total cost is higher than the payment, return a bad response
         return badResponse(res, `Payment not enough, Payment was: ${payment} and the total price was ${total}`);
-    
+
     // calculate the change
     const change = payment - total;
 
