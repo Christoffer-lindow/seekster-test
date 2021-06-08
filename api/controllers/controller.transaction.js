@@ -51,7 +51,7 @@ const processPayment = async (req, res) => {
     const total = calculateTotalPrice(item_list, total_discount);
     if (total > payment)
         // if the total cost is higher than the payment, return a bad response
-        return badResponse(res, "Payment not enough");
+        return badResponse(res, `Payment not enough, Payment was: ${payment} and the total price was ${total}`);
     
     // calculate the change
     const change = payment - total;

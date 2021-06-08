@@ -22,7 +22,7 @@ const calculateTotalPrice = (item_list, total_discount) => {
 const calculateDiscountedItemsTotal = (itemList) => {
     let itemsDiscounted = 0;
     itemList.forEach(item => {
-        let discountedItem = item.price_per_item - (item.price_per_item * item.discount);
+        let discountedItem = (item.price_per_item - (item.price_per_item * item.discount)) * item.qty;
         itemsDiscounted += discountedItem;
     });
     return itemsDiscounted;
